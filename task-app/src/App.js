@@ -7,7 +7,7 @@ class App extends Component {
     super();
 
     this.state = {
-      task: { text: "" },
+      task: { text: "", id: uniqid() },
       tasks: [],
     };
   }
@@ -16,6 +16,7 @@ class App extends Component {
     this.setState({
       task: {
         text: e.target.value,
+        id: this.state.task.id,
       },
     });
   };
@@ -24,7 +25,7 @@ class App extends Component {
     e.preventDefault();
     this.setState({
       tasks: this.state.tasks.concat(this.state.task),
-      task: { text: "" },
+      task: { text: "", id: uniqid() },
     });
   };
 

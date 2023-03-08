@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import uniqid from "uniqid";
+import Overview from "./components/Overview";
 
 class App extends Component {
   constructor() {
@@ -42,6 +43,7 @@ class App extends Component {
           />
           <button type="submit">Add Task</button>
         </form>
+        <Overview tasks={tasks} />
       </div>
     );
   }
